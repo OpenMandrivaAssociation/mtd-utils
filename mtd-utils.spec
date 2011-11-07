@@ -1,16 +1,17 @@
-Summary: Utilities for dealing with MTD (flash) devices
-Name: mtd-utils
-Version: 1.2.0
-Release: %mkrel 2
-License: GPLv2+
-Group: Development/Other
-URL: http://www.linux-mtd.infradead.org
-Source0: ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+Summary:	Utilities for dealing with MTD (flash) devices
+Name:		mtd-utils
+Version:	1.4.6
+Release:	%mkrel 1
+License:	GPLv2+
+Group:		Development/Other
+URL:		http://www.linux-mtd.infradead.org
+Source0:	ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
-BuildRequires: zlib-devel
-BuildRequires: liblzo-devel
-BuildRequires: acl-devel
+BuildRequires:	zlib-devel
+BuildRequires:	libuuid-devel
+BuildRequires:	liblzo-devel
+BuildRequires:	acl-devel
 
 %description
 The mtd-utils package contains utilities related to handling MTD devices,
@@ -40,12 +41,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %doc COPYING device_table.txt
-%{_sbindir}/bin2nand
 %{_sbindir}/doc*
 %{_sbindir}/flash*
+%{_sbindir}/mtdinfo
 %{_sbindir}/ftl*
 %{_sbindir}/jffs2dump
-%{_sbindir}/mkbootenv
 %{_sbindir}/mkfs.jffs2
 %{_sbindir}/mtd_debug
 %{_sbindir}/nand*
@@ -57,9 +57,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 
 %files ubi
-%{_sbindir}/mkpfi
-%{_sbindir}/pddcustomize
-%{_sbindir}/pfi*
-%{_sbindir}/unubi
-%{_sbindir}/ubi*
+%{_sbindir}/mkfs.ubifs
+%{_sbindir}/ubiattach
+%{_sbindir}/ubicrc32
+%{_sbindir}/ubidetach
+%{_sbindir}/ubiformat
+%{_sbindir}/ubiupdatevol
+%{_sbindir}/ubirsvol
+%{_sbindir}/ubirmvol
+%{_sbindir}/ubirename
+%{_sbindir}/ubinize
+%{_sbindir}/ubinfo
+%{_sbindir}/ubimkvol
 
