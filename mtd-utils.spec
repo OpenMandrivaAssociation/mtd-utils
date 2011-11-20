@@ -1,7 +1,7 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
-Version:	1.4.6
-Release:	%mkrel 1
+Version:	1.4.8
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
@@ -29,23 +29,19 @@ MTD (flash) devices.
 %setup -q
 
 %build
-make
+%make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root,-)
 %doc COPYING device_table.txt
 %{_sbindir}/doc*
 %{_sbindir}/flash*
 %{_sbindir}/mtdinfo
 %{_sbindir}/ftl*
 %{_sbindir}/jffs2dump
+%{_sbindir}/jffs2reader
 %{_sbindir}/mkfs.jffs2
 %{_sbindir}/mtd_debug
 %{_sbindir}/nand*
