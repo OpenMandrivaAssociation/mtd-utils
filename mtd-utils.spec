@@ -1,12 +1,11 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
-Version:	1.4.8
+Version:	1.5.0
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
 Source0:	ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 BuildRequires:	zlib-devel
 BuildRequires:	libuuid-devel
