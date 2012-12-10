@@ -65,3 +65,25 @@ MTD (flash) devices.
 %{_sbindir}/ubinfo
 %{_sbindir}/ubimkvol
 
+
+
+%changelog
+* Tue May 08 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.5.0-1
++ Revision: 797342
+- version update 1.5.0
+
+* Sun Nov 20 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.8-1
++ Revision: 732024
+- version update to 1.4.8 and spec cleaned
+
+* Tue Nov 08 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.6-1
++ Revision: 728728
+- update to 1.4.6 upstream release
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.1 packages
+
+* Tue Feb 02 2010 Caio Begotti <caio1982@mandriva.org> 1.2.0-1mdv2010.1
++ Revision: 499657
+- import mtd-utils
+
