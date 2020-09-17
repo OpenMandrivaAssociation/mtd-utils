@@ -1,15 +1,16 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
-Version:	1.5.0
-Release:	2
+Version:	2.1.2
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
 Source0:	ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	zlib-devel
-BuildRequires:	libuuid-devel
-BuildRequires:	liblzo-devel
+BuildRequires:	pkgconfig(uuid)
+BuildRequires:	zstd-devel
+BuildRequires:	lzo-devel
 BuildRequires:	acl-devel
 
 %description
@@ -28,21 +29,21 @@ MTD (flash) devices.
 %setup -q
 
 %build
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
-%doc COPYING device_table.txt
+%doc COPYING
 %{_sbindir}/doc*
 %{_sbindir}/flash*
-%{_sbindir}/mtdinfo
 %{_sbindir}/ftl*
 %{_sbindir}/jffs2dump
 %{_sbindir}/jffs2reader
 %{_sbindir}/mkfs.jffs2
-%{_sbindir}/mtd_debug
+%{_sbindir}/*mtd*
 %{_sbindir}/nand*
 %{_sbindir}/nftl*
 %{_sbindir}/recv_image
@@ -53,37 +54,4 @@ MTD (flash) devices.
 
 %files ubi
 %{_sbindir}/mkfs.ubifs
-%{_sbindir}/ubiattach
-%{_sbindir}/ubicrc32
-%{_sbindir}/ubidetach
-%{_sbindir}/ubiformat
-%{_sbindir}/ubiupdatevol
-%{_sbindir}/ubirsvol
-%{_sbindir}/ubirmvol
-%{_sbindir}/ubirename
-%{_sbindir}/ubinize
-%{_sbindir}/ubinfo
-%{_sbindir}/ubimkvol
-
-
-
-%changelog
-* Tue May 08 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.5.0-1
-+ Revision: 797342
-- version update 1.5.0
-
-* Sun Nov 20 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.8-1
-+ Revision: 732024
-- version update to 1.4.8 and spec cleaned
-
-* Tue Nov 08 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.6-1
-+ Revision: 728728
-- update to 1.4.6 upstream release
-
-  + Oden Eriksson <oeriksson@mandriva.com>
-    - the mass rebuild of 2010.1 packages
-
-* Tue Feb 02 2010 Caio Begotti <caio1982@mandriva.org> 1.2.0-1mdv2010.1
-+ Revision: 499657
-- import mtd-utils
-
+%{_sbindir}/ubi*
