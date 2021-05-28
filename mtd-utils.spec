@@ -7,26 +7,26 @@ Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
 Source0:	ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
 
-BuildRequires:	zlib-devel
+BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:	zstd-devel
-BuildRequires:	lzo-devel
-BuildRequires:	acl-devel
+BuildRequires:	pkgconfig(libzstd)
+BuildRequires:	pkgconfig(lzo2)
+BuildRequires:	pkgconfig(libacl)
 
 %description
 The mtd-utils package contains utilities related to handling MTD devices,
 and for dealing with FTL, NFTL JFFS2 etc.
 
 %package ubi
-Summary: Utilities for dealing with UBI
-Group: Development/Other
+Summary:	Utilities for dealing with UBI
+Group:		Development/Other
 
 %description ubi
-The mtd-utils-ubi package contains utilities for manipulating UBI on 
+The mtd-utils-ubi package contains utilities for manipulating UBI on
 MTD (flash) devices.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
