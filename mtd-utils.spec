@@ -1,7 +1,7 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
 Version:	2.1.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
