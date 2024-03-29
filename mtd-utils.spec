@@ -1,7 +1,7 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
-Version:	2.1.2
-Release:	2
+Version:	2.2.0
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 URL:		http://www.linux-mtd.infradead.org
@@ -38,6 +38,7 @@ MTD (flash) devices.
 %files
 %doc COPYING
 %{_sbindir}/doc*
+%{_sbindir}/fectest
 %{_sbindir}/flash*
 %{_sbindir}/ftl*
 %{_sbindir}/jffs2dump
@@ -50,8 +51,10 @@ MTD (flash) devices.
 %{_sbindir}/rfd*
 %{_sbindir}/serve_image
 %{_sbindir}/sumtool
+%{_libexecdir}/mtd-utils
 %{_mandir}/*/*
 
 %files ubi
 %{_sbindir}/mkfs.ubifs
+%{_sbindir}/mount.ubifs
 %{_sbindir}/ubi*
