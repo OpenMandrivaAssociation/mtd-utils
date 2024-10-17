@@ -4,7 +4,7 @@ Version:	2.2.1
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
-URL:		http://www.linux-mtd.infradead.org
+URL:		https://www.linux-mtd.infradead.org
 Source0:	ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(zlib)
