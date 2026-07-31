@@ -1,6 +1,6 @@
 Summary:	Utilities for dealing with MTD (flash) devices
 Name:		mtd-utils
-Version:	2.2.1
+Version:	2.3.1
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
